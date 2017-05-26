@@ -70,16 +70,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'default';
+$active_group = 'test'; // 'default'
 $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+        'hostname' => 'Server-Data\SQLExpress',
 	'username' => '',
 	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
+	'database' => 'WANNDBALL',
+	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
@@ -93,4 +93,64 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
+);
+
+//sqlserver on docker ip:192.168.99.100 port:1500
+$db['test'] = array(
+	'dsn'	=> '',
+	'hostname' => '192.168.99.100,1500',  /*localhost*/
+	'username' => 'sa',
+	'password' => 'QAZ741w7',
+	'database' => 'WANNDBs',
+	'dbdriver' => 'sqlsrv',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+/*
+$db['test'] = array(
+	'dsn'	=> '',
+	'hostname' => 'COM41\SQLExpress',  
+	'username' => '',
+	'password' => '',
+	'database' => 'WANNDBALL',
+	'dbdriver' => 'sqlsrv',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+); */
+
+$db['mongo']  = array(
+    
+    
+);
+
+$db['pgsql'] = array(
+    
+    'port' => 5432
+);
+
+$db['mysql'] = array(
+    
+    
 );

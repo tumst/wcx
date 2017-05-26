@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 /*
@@ -13,20 +14,28 @@ if (!defined('BASEPATH'))
  * @author Administrator
  */
 class c_stp extends CI_Controller {
+
+    public function index() {
+        echo 'this is index function ';
+    }
+
     function __construct() {
-         parent::__construct();
-         
+        parent::__construct();
+        $this->load->model('test/m_stp');
     }
-    
-    function test_stp(){
-        echo 'test stp';
-        
-        
+
+    function test_stp() {
+        //echo 'test stp !!';
+        /* $rest = $this->m_stp->test_stp();
+          foreach ($rest as $col){
+          //print_r($col);
+          echo $col['CusID']. '   '. $col['CusName']. '<br>';
+
+          } */
+        $this->load->view('test/v_test');
     }
-   
+
 }
 
-
-
-/* End of file api_inventory_packaging */
-/* Location: ./application/controllers/api/api_inventory_packaging.php */
+/* End of file c_stp.php */
+/* Location: ./application/controllers/test/c_stp.php */

@@ -241,6 +241,7 @@ class Key extends REST_Controller {
 
     private function _key_exists($key)
     {
+        $this->load->database();
         return $this->db
             ->where(config_item('rest_key_column'), $key)
             ->count_all_results(config_item('rest_keys_table')) > 0;
@@ -248,6 +249,7 @@ class Key extends REST_Controller {
 
     private function _insert_key($key, $data)
     {
+//        $this->load->database();
         $data[config_item('rest_key_column')] = $key;
         $data['date_created'] = function_exists('now') ? now() : time();
 

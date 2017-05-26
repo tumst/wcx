@@ -110,7 +110,7 @@ $config['rest_realm'] = 'REST API';
 |           authorization key
 |
 */
-$config['rest_auth'] = FALSE;
+$config['rest_auth'] = 'FALSE'; //FALSE
 
 /*
 |--------------------------------------------------------------------------
@@ -278,7 +278,7 @@ $config['rest_ip_blacklist'] = '';
 | if you have any of these features enabled
 |
 */
-$config['rest_database_group'] = 'default';
+$config['rest_database_group'] = 'test';
 
 /*
 |--------------------------------------------------------------------------
@@ -313,7 +313,7 @@ $config['rest_keys_table'] = 'keys';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = FALSE;  //FALSE
+$config['rest_enable_keys'] = TRUE;  //FALSE
 
 /*
 |--------------------------------------------------------------------------
@@ -324,7 +324,7 @@ $config['rest_enable_keys'] = FALSE;  //FALSE
 | column name to match e.g. my_key
 |
 */
-$config['rest_key_column'] = 'key';
+$config['rest_key_column'] = 'keys';
 
 /*
 |--------------------------------------------------------------------------
@@ -535,7 +535,7 @@ $config['rest_language'] = 'english';
 | will access it through a browser
 |
 */
-$config['check_cors'] = FALSE;
+$config['check_cors'] = TRUE;//FALSE
 
 /*
 |--------------------------------------------------------------------------
@@ -550,7 +550,9 @@ $config['allowed_cors_headers'] = [
   'X-Requested-With',
   'Content-Type',
   'Accept',
-  'Access-Control-Request-Method'
+  'Access-Control-Request-Method',
+  'cache-control',
+  'X-API-KEY'
 ];
 
 /*
@@ -579,7 +581,7 @@ $config['allowed_cors_methods'] = [
 | source domain
 |
 */
-$config['allow_any_cors_domain'] = FALSE;
+$config['allow_any_cors_domain'] = TRUE ; //FALSE
 
 /*
 |--------------------------------------------------------------------------
@@ -592,4 +594,4 @@ $config['allow_any_cors_domain'] = FALSE;
 | e.g. $config['allowed_origins'] = ['http://www.example.com', 'https://spa.example.com']
 |
 */
-$config['allowed_cors_origins'] = [];
+$config['allowed_cors_origins'] = ['http://localhost:4200'];

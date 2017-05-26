@@ -9,7 +9,7 @@ if (!defined('BASEPATH'))
  *
  * @author Administrator
  */
-class M_lotqueue extends CI_Model {
+class M_lotqueuefin extends CI_Model {
 
     private $table = 'tblBMR_Formula_TempIV';         //setting table of primary key
     private $pk = 'RawPK';             //setting primary key
@@ -25,7 +25,8 @@ class M_lotqueue extends CI_Model {
         'RawmatName'=> array('name' => 'RawmatName','type' => 'string'), 
         'CatLot'=> array('name' => 'id','type' => 'string'), 
         'idWeight'=> array('name' => 'idWeight', 'type' => 'number'),
-        'colorid' => array('name' => 'colorid', 'type'=> 'string')
+        'colorid' => array('name' => 'colorid', 'type'=> 'string'),
+        
     );
 
     public function __construct() {
@@ -149,5 +150,5 @@ class M_lotqueue extends CI_Model {
 
 }
 
-/* End of file m_lotqueue.php */
-/* Location: ./application/models/m_lotqueue.php */
+/* End of file m_lotqueuefin.php */
+/* Location: ./application/models/m_lotqueuefin.php */

@@ -9,26 +9,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * and open the template in the editor.
  */-->
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>WannApp</title>
-  <base href="/">
+    <head>
+        <meta charset="utf-8">
+        <title>WannApp</title>
+        <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- bootstrap css -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- bootstrap css -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style type="text/css">
-    body {
-      background: #e2e1e0;
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style type="text/css">
+            body {
+                background: #e2e1e0;
+            }
+
+        </style>
+    </head>
+    <body >
+    <app-root>Loading...</app-root>
+    <!--
+    <script type="text/javascript" src="ng2/inline.bundle.js"></script>
+    <script type="text/javascript" src="polyfills.bundle.js"></script>
+    <script type="text/javascript" src="styles.bundle.js"></script>
+    <script type="text/javascript" src="vendor.bundle.js"></script>
+    <script type="text/javascript" src="main.bundle.js"></script>
+    -->
+    <?php
+    if (!empty($js_list)) {
+        foreach ($js_list as $list) {
+            echo $list;
+        }
+    } else {
+        //echo "null";
     }
-
-  </style>
-</head>
-<body >
-  <app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+    ?>
+</body>
 </html>
 
 
